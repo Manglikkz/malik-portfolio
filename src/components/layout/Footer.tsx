@@ -24,7 +24,7 @@ export const Footer: React.FC = () => {
     },
     {
       id: 'footer-instagram',
-      name: 'instagramUrl',
+      name: 'Instagram',
       href: instagramUrl,
       icon: Globe,
       isExternal: true,

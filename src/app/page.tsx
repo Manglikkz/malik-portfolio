@@ -7,6 +7,7 @@ import { ProjectsView } from '@/components/views/ProjectsView';
 import { AchievementsView } from '@/components/views/AchievementsView';
 import { SkillsView } from '@/components/views/SkillsView';
 import { JourneyView } from '@/components/views/JourneyView';
+import { AdminShell } from '@/components/admin/AdminShell';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { ContactModal } from '@/components/layout/ContactModal';
@@ -26,6 +27,8 @@ function PortfolioContent() {
         return <AchievementsView />;
       case 'skills':
         return <SkillsView />;
+      case 'admin':
+        return <AdminShell />;
       case 'journey':
         return <JourneyView />;
       default:
