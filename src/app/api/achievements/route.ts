@@ -1,21 +1,17 @@
 import { NextResponse } from 'next/server';
-import { getDb, checkConnection } from '@/lib/db';
+import { getDb } from '@/lib/db';
 
 export async function GET() {
   try {
-    const db = getDb();
-    const result = await db`SELECT 1 as connected`;
+    const pool = getDb();
+    const result = await pool.query('SELECT 1 as connected');
     return NextResponse.json({ 
-      status: 'Database connected',
+      status: 'OK',
       timestamp: new Date().toISOString()
     });
   } catch (error: any) {
-    if (error.message.includes('Database not configured')) {
-      return NextResponse.json({ 
-        status: 'Database not configured',
-        message: 'Set DATABASE_URL environment variable',
-        timestamp: new Date().toISOString()
-      });
+    if (error.message?.includes('not configured')) {
+      return NextResponse.json({ status: 'DB not configured' });
     }
     return NextResponse.json({ error: 'Failed' }, { status: 500 });
   }

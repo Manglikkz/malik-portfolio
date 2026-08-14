@@ -3,8 +3,8 @@ import { getDb, checkConnection } from '@/lib/db';
 
 export async function GET() {
   try {
-    const db = getDb();
-    const result = await db`SELECT 1 as connected`;
+    const pool = getDb();
+    const result = await pool.query('SELECT 1 as connected');
     return NextResponse.json({ 
       status: 'Database connected',
       timestamp: new Date().toISOString()
