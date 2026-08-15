@@ -1,0 +1,25 @@
+{
+  "name": "Malik Ibrahim Portfolio",
+  "short_name": "Malik Ibrahim",
+  "description": "Portfolio Malik Ibrahim — Full-Stack Developer & Cybersecurity Enthusiast di Depok, Indonesia",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8FBFF",
+  "theme_color": "#1769E8",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "id",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["portfolio", "developer", "cybersecurity"]
+}
